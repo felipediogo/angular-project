@@ -19,19 +19,10 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
-    // if (this.username == 'admin' && this.password == 'admin') {
-    // } else {
-    if (this.username.trim() == '') {
-      alert('Username cannot be empty');
-    } else if (this.password.trim() == '') {
-      alert('password cannot be empty');
+    if (this.loginService.login(this.username, this.password)) {
+      this.router.navigate(["/"]);
     } else {
-      let response = this.loginService.login(this.username, this.password);
-      if (response.error) {
-        alert(response.error);
-      } else {
-        this.router.navigate(["dragons"]);
-      }
+      alert('Wrong user or password');
     }
   }
 }

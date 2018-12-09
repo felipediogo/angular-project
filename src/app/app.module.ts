@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DragonsListComponent } from './dragons/dragons.list.component';
 import {DragonsFormComponent} from './dragons/dragons.form.component';
 import {DeleteConfirmationModalComponent} from './dragons/components/delete.confirmation.modal.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import {DeleteConfirmationModalComponent} from './dragons/components/delete.conf
     DeleteConfirmationModalComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
-    MaterialModule,
+    HttpModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   entryComponents: [DeleteConfirmationModalComponent],
   providers: [],

@@ -11,6 +11,7 @@ import { MatDialog } from '@angular/material';
   templateUrl: './dragons.list.component.html',
   styleUrls: ['./dragons.list.component.scss'],
   providers: [DragonService]
+
 })
 export class DragonsListComponent implements OnInit {
   dragons: any = [];

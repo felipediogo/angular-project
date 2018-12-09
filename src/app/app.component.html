@@ -3,8 +3,8 @@
   <span class="example-fill-remaining-space"></span>
   <span class="align-center"></span>
   <span class="flex-spacer"></span>
-  <button mat-button>Home</button>
-  <button mat-button>About</button>
-  <button mat-button>Login</button>
+  <button mat-button routerLink="/">Home</button>
+  <button mat-button routerLink="/about">About</button>
+  <button mat-button (click)="logout()">Logout</button>
 </mat-toolbar>
 <router-outlet></router-outlet>
