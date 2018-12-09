@@ -1,16 +1,18 @@
-<div class="container" fxLayoutAlign="center center">
-  <div fxLayout="row" fxLayoutAlign="center center" class="content">
+<div class="container" layout="row">
+  <div class="content">
     <mat-card class="card">
-      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+      <mat-card-title>
         <h3>Login</h3>
       </mat-card-title>
       <mat-card-content>
-        <form (submit)="login()" novalidate >
+        <form (submit)="login()" novalidate>
           <mat-form-field class="full-width">
-            <input matInput placeholder="Username" [(ngModel)]="username" autocomplete="new-password"  name="username" required />
+            <input matInput placeholder="Username" [(ngModel)]="username" autocomplete="new-password" name="username"
+              required />
           </mat-form-field>
           <mat-form-field class="full-width">
-            <input matInput placeholder="Password" [(ngModel)]="password" autocomplete="new-password"  type="password" name="password" required />
+            <input matInput placeholder="Password" [(ngModel)]="password" autocomplete="new-password" type="password"
+              name="password" required />
           </mat-form-field>
           <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
           <div class="blocks">

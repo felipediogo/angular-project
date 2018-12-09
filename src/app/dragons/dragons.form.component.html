@@ -1,0 +1,28 @@
+<div class="container" fxLayoutAlign="center center">
+  <div fxLayout="row" fxLayoutAlign="center center" class="content">
+    <mat-card class="card">
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+        <h3>Dragon Form</h3>
+      </mat-card-title>
+      <mat-card-content>
+        <form (submit)="save()" novalidate>
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Name" [(ngModel)]="dragon.name" autocomplete="new-password" name="name" required />
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Type" [(ngModel)]="dragon.type" autocomplete="new-password" name="type" required />
+          </mat-form-field>
+          <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+          <div class="blocks">
+            <button button="submit" mat-raised-button color="primary" [disabled]="disableSubmit()">
+              Save
+            </button>
+            <button button="button" (click)="goBack()" mat-raised-button color="warn">
+              Back
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
