@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class DragonService {
-  API_URL = 'https://dragons-api.herokuapp.com/api/dragons';
+  public API_URL = 'https://dragons-api.herokuapp.com/api/dragons';
   constructor(private http: HttpClient) {}
 
   private extractData(res: Response) {
