@@ -12,6 +12,9 @@
           <mat-form-field class="full-width">
             <input matInput placeholder="Type" [(ngModel)]="dragon.type" autocomplete="new-password" name="type" required />
           </mat-form-field>
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="Histories" name="histories" [(ngModel)]="dragon.histories"></textarea>
+          </mat-form-field>
           <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
           <div class="blocks">
             <button button="submit" mat-raised-button color="primary" [disabled]="disableSubmit()">

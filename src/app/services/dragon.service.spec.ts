@@ -88,7 +88,7 @@ describe('Dragon Service', () => {
       "created_at": "2018-06-21T20:46:40.532Z",
       "slug": "",
       "__v": 0,
-      "histories": []
+      "histories": ''
     };
 
     service.saveDragon(dragon).subscribe(response => {
@@ -109,7 +109,7 @@ describe('Dragon Service', () => {
       "created_at": "2018-06-21T20:46:40.532Z",
       "slug": "5b2c0eb08969530011473f6f",
       "__v": 0,
-      "histories": []
+      "histories": ''
     };
 
     const putResponse = {

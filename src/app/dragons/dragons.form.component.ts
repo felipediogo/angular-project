@@ -15,7 +15,7 @@ export class DragonsFormComponent implements OnInit {
   dragon: any = {
     name: '',
     type: '',
-    histories: []
+    histories: ''
   };
   constructor(
     private router: Router,
@@ -28,7 +28,9 @@ export class DragonsFormComponent implements OnInit {
     if (id) {
       this.dragonService.getDragon(id)
       .subscribe(data => {
+        const histories = data.histories.join('\n');
         this.dragon = data;
+        this.dragon.histories = histories;
       });
     }
   }

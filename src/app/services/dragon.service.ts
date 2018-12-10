@@ -30,7 +30,9 @@ export class DragonService {
     );
   }
 
-  saveDragon(dragon: {slug: string}): Observable<any> {
+  saveDragon(dragon: {slug: string, histories: any}): Observable<any> {
+    const list = dragon.histories.split('\n');
+    dragon.histories = list;
     if (dragon.slug) {
       return this.http.put(`${this.API_URL}/${dragon.slug}`, dragon).pipe(
         map(this.extractData)
